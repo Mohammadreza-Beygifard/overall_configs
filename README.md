@@ -33,3 +33,28 @@ in my case:
 ```bash
 git clone https://github.com/sobolevn/sobole-zsh-theme.git ln -s $PWD/sobole-zsh-theme/sobole.zsh-theme ~/.oh-my-zsh/custom/themes/sobole.zsh-theme
 ```
+
+#step4
+
+Install nodejs as almoste moste of nvim plugins need that.
+
+```bash
+sudo apt install npm
+npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+#step5
+
+Install tmux
+```bash
+sudo apt install tmux
+```
+
+Create a sLink with .thux.conf and tmux-packtheme, be careful that the name of the .tmux-themepack in home directory should be .tmux-themepack
+
+example
+```bash
+ln -s ~/overall_configs/tmux-themepack .tmux-themepack
+```
+
