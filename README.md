@@ -58,3 +58,10 @@ example
 ln -s ~/overall_configs/tmux-themepack .tmux-themepack
 ```
 
+#step6
+
+Install SilverSercher-ag
+
+```bash
+sudo apt-get install silversearcher-ag
+```
