@@ -15,6 +15,9 @@ zsh --version
 whereis zsh
 ```
 
+```bash
+ln -s ~/overall_configs/.zshrc ~/.zshrc
+```
 #step3
 
 Initialize oh-my-zsh
@@ -27,7 +30,7 @@ git submodule init ohmyzsh
 git submodule update
 ```
 
-and also install the theem you are currentlu using
+and also install the theme you are currentlu using
 
 in my case:
 ```bash
@@ -53,11 +56,13 @@ sudo apt install tmux
 
 Create a sLink with .thux.conf and tmux-packtheme, be careful that the name of the .tmux-themepack in home directory should be .tmux-themepack
 
-example
 ```bash
-ln -s ~/overall_configs/tmux-themepack .tmux-themepack
+ln -s ~/overall_configs/tmux-themepack ~/.tmux-themepack
 ```
 
+```bash
+ln -s ~/overall_configs/.tmux.conf ~/.tmux.conf
+```
 #step6
 
 Install SilverSercher-ag
@@ -72,4 +77,9 @@ Install neovim
 
 ```bash
 sudo apt install neovim
+```
+
+
+```bash
+ln -s ~/overall_configs/.config/nvim ~/.config/
 ```

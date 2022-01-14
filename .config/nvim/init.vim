@@ -25,6 +25,7 @@ nmap <C-p> :Files<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeWinSize=60
+let NERDTreeShowHidden=1
 
 if (has("termguicolors"))
  set termguicolors
