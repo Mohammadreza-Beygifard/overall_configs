@@ -65,3 +65,11 @@ Install SilverSercher-ag
 ```bash
 sudo apt-get install silversearcher-ag
 ```
+
+#step7
+
+Install neovim
+
+```bash
+sudo apt install neovim
+```
