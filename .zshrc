@@ -102,14 +102,14 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias clang='clang-12'
 eval "$(register-python-argcomplete3 expt)"
-export http_proxy="http://127.0.0.1:3128"
-export https_proxy="http://127.0.0.1:3128"
-export ftp_proxy="http://127.0.0.1:3128"
-export HTTP_PROXY="http://127.0.0.1:3128"
-export HTTPS_PROXY="http://127.0.0.1:3128"
-export FTP_PROXY="http://127.0.0.1:3128"
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
+#export http_proxy="http://127.0.0.1:3128"
+#export https_proxy="http://127.0.0.1:3128"
+#export ftp_proxy="http://127.0.0.1:3128"
+#export HTTP_PROXY="http://127.0.0.1:3128"
+#export HTTPS_PROXY="http://127.0.0.1:3128"
+#export FTP_PROXY="http://127.0.0.1:3128"
+#export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+#export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
 
 ###  RPP-BEGIN  ###
 # Do not change content between BEGIN and END!
