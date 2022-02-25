@@ -102,14 +102,14 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias clang='clang-12'
 eval "$(register-python-argcomplete3 expt)"
-#export http_proxy="http://127.0.0.1:3128"
-#export https_proxy="http://127.0.0.1:3128"
-#export ftp_proxy="http://127.0.0.1:3128"
-#export HTTP_PROXY="http://127.0.0.1:3128"
-#export HTTPS_PROXY="http://127.0.0.1:3128"
-#export FTP_PROXY="http://127.0.0.1:3128"
-#export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-#export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
+# export http_proxy="http://127.0.0.1:3128"
+# export https_proxy="http://127.0.0.1:3128"
+# export ftp_proxy="http://127.0.0.1:3128"
+# export HTTP_PROXY="http://127.0.0.1:3128"
+# export HTTPS_PROXY="http://127.0.0.1:3128"
+# export FTP_PROXY="http://127.0.0.1:3128"
+# export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+# export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
 
 ###  RPP-BEGIN  ###
 # Do not change content between BEGIN and END!
@@ -128,3 +128,18 @@ alias ddaddir="cd /home/sc62291/ddad/"
 alias adpdir="cd /home/sc62291/ddad/application/adp"
 # The checkout is destructive since -f is used
 function pullall() { ddaddir; git checkout -f master && git pull && git submodule foreach 'git checkout -f master && git pull'; cd - ; }
+
+ddadcompdb() {
+    if [ $# -eq 0 ]; then
+        echo "No Bazel targets specified!"
+        return 1
+    fi;
+    cd ~/ddad &&
+    ~/ddad/application/adp/tools/compile_commands/generate_compile_commands.sh ~/ddad/compile_commands.json --config=stla_base --config=platform_ros $* &&
+    if [ -e ~/ddad/compile_commands.json ]; then
+        sed -i 's/-fno-canonical-system-headers //g' ~/ddad/compile_commands.json;
+        sed -i 's/-ftree-loop-vectorize //g' ~/ddad/compile_commands.json;
+        perl -ni.bak -e 'print unless /.*\.h(pp)?"},?/' ~/ddad/compile_commands.json;
+    fi;
+    cd - 2> /dev/null;
+}

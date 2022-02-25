@@ -1,5 +1,0 @@
-{
-	"json.enable": true,
-	"json.format.enable": true,
-	"clangd.enabled": true
-}
