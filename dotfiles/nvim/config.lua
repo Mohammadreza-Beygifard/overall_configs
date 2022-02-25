@@ -7,3 +7,4 @@ require "user.treesitter"
 require "user.vim-gutentags"
 require "user.nvim-tree"
 require "user.gitsigns"
+--vim.cmd('source'..nvimrc..'/lua/user/ctrlsf.vim')

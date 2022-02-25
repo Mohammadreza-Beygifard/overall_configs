@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
-  
+  use "dyng/ctrlsf.vim"  
   -- colorschemes
   use "sainnhe/everforest"
   use "Julpikar/night-owl.nvim"

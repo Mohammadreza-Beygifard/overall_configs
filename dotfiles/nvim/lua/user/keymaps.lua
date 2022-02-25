@@ -4,6 +4,8 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+--local ctrlsf_func = vim.cmd "<Plug>CtrlSFVwordPath"
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -49,3 +51,9 @@ keymap("n", "<c-f>", "<cmd>Telescope find_files<cr>", opts)
 --keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = true }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<c-n>", "<cmd>Gitsigns blame_line<cr>", opts)
+
+--ctrlsf
+--keymap("v", "<leader>sp", ctrlsf_func, opts)
+
+--spectre
+
