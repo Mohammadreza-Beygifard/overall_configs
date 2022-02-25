@@ -6,3 +6,4 @@ vim.opt.smartindent=true
 vim.opt.termguicolors=true
 vim.opt.expandtab = true
 vim.opt.tabstop=2
+vim.opt.cursorline=true
