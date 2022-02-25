@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
+  
   -- colorschemes
   use "sainnhe/everforest"
   use "Julpikar/night-owl.nvim"
@@ -60,6 +61,8 @@ return packer.startup(function(use)
   --gutentags
   use "ludovicchabant/vim-gutentags"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"        
     -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
