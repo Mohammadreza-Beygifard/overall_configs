@@ -55,5 +55,5 @@ keymap("n", "<c-n>", "<cmd>Gitsigns blame_line<cr>", opts)
 --ctrlsf
 --keymap("v", "<leader>sp", ctrlsf_func, opts)
 
---spectre
-
+keymap("n", "<leader>q", ":e %:r.cpp<CR>", opts)
+keymap("n", "<leader>Q", ":e %:r.h<CR>", opts)
