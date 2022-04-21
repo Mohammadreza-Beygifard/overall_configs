@@ -59,7 +59,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   --gutentags
-  use "ludovicchabant/vim-gutentags"
+ -- use "ludovicchabant/vim-gutentags"
 
   -- Git
   use "lewis6991/gitsigns.nvim"        
